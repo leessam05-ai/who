@@ -410,12 +410,8 @@
 
     function show(i){
       if(i < seq.length){
-        countEl.className = "count";
         countEl.textContent = seq[i];
-        void countEl.offsetWidth;
-        countEl.style.animation = "none";
-        void countEl.offsetWidth;
-        countEl.style.animation = "";
+        countEl.className = "count";
         beep(freqs[i], 0, 0.18, "square", 0.16);
         setTimeout(function(){ show(i + 1); }, step);
       }else{
