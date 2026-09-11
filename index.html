@@ -410,13 +410,17 @@
 
     function show(i){
       if(i < seq.length){
+        countEl.className = "";
+        countEl.offsetHeight;
         countEl.textContent = seq[i];
         countEl.className = "count";
         beep(freqs[i], 0, 0.18, "square", 0.16);
         setTimeout(function(){ show(i + 1); }, step);
       }else{
-        countEl.className = "count go";
+        countEl.className = "";
+        countEl.offsetHeight;
         countEl.textContent = "두구두구!";
+        countEl.className = "count go";
         setTimeout(function(){
           overlayEl.hidden = true;
           reveal(winners);
